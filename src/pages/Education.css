@@ -1,0 +1,198 @@
+
+.education-page {
+  background: #000;
+  color: #f5f5f5;
+  padding: 50px 7% 80px;
+  min-height: 75vh;
+}
+
+.education-hero {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.education-intro h1 {
+  font-size: clamp(32px, 3vw, 50px);
+  line-height: 1.2;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.education-intro h1 span {
+  color: #f5c542;
+  text-decoration: underline;
+  text-decoration-color: #aaa;
+  text-underline-offset: 5px;
+}
+
+.education-intro > p {
+  font-size: 22px;
+  line-height: 1.7;
+  color: #aaa;
+  margin: 0;
+}
+
+.education-steps {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.education-steps span {
+  background: #f5c542;
+  color: #222;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 13px;
+}
+
+.education-steps b {
+  font-size: 21px;
+}
+
+.trader-academy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 45px;
+  background: #414141;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+}
+
+.trader-academy h2 {
+  font-size: 29px;
+  margin: 0 0 14px;
+}
+
+.trader-academy p {
+  color: #aaa;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0 0 22px;
+}
+
+.academy-button {
+  display: inline-block;
+  background: #f5c542;
+  color: #333;
+  text-decoration: none;
+  border-radius: 7px;
+  padding: 14px 35px;
+  font-size: 17px;
+  transition: background 0.2s ease;
+}
+
+.academy-button:hover {
+  background: #dfb12b;
+}
+
+.academy-icon {
+  font-size: 70px;
+  flex-shrink: 0;
+}
+
+.education-courses {
+  margin-top: 100px;
+  background: #414141;
+}
+
+.education-course {
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  gap: 35px;
+  align-items: center;
+  padding: 20px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.education-course:last-child {
+  border-bottom: none;
+}
+
+.course-title {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.course-title h2 {
+  font-size: 27px;
+  margin: 0;
+}
+
+.course-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #f5c542;
+  font-size: 30px;
+}
+
+.education-course > p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 680px;
+}
+
+@media (max-width: 1000px) {
+  .education-hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .education-courses {
+    margin-top: 55px;
+  }
+
+  .education-course {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .education-page {
+    padding: 35px 5% 50px;
+  }
+
+  .education-intro > p {
+    font-size: 17px;
+  }
+
+  .education-steps {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .trader-academy {
+    padding: 25px;
+  }
+
+  .academy-icon {
+    font-size: 45px;
+  }
+
+  .education-course {
+    padding: 20px 12px;
+  }
+
+  .course-title h2 {
+    font-size: 21px;
+  }
+
+  .course-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+}

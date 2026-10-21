@@ -1,0 +1,142 @@
+
+.why-bitstek {
+  background: #000;
+  color: #fff;
+  padding: 55px 7.2% 60px;
+}
+
+/* Section heading */
+.why-bitstek-header h2 {
+  margin: 0 0 12px;
+  color: #f4c431;
+  font-size: clamp(28px, 2.3vw, 40px);
+  font-weight: 700;
+}
+
+.why-bitstek-header > p {
+  margin: 0;
+  color: #aaa;
+  font-size: clamp(17px, 1.4vw, 24px);
+  line-height: 1.6;
+}
+
+/* Three-column feature grid */
+.why-bitstek-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 45px;
+  row-gap: 64px;
+  margin-top: 42px;
+}
+
+.why-bitstek-card {
+  min-width: 0;
+}
+
+/* Custom SVG icons */
+.why-bitstek-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 105px;
+  margin-bottom: 12px;
+}
+
+.why-bitstek-svg-icon {
+  display: block;
+  width: 100px;
+  height: 100px;
+  overflow: visible;
+}
+
+/* Feature titles */
+.why-bitstek-card h3 {
+  position: relative;
+  margin: 0 0 24px;
+  padding-left: 17px;
+  color: #f4c431;
+  font-size: clamp(18px, 1.45vw, 25px);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.why-bitstek-card h3::before {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 0;
+  width: 6px;
+  background: #e6e6e6;
+  content: '';
+}
+
+/* Feature descriptions */
+.why-bitstek-card > p {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+  .why-bitstek {
+    padding: 45px 5%;
+  }
+
+  .why-bitstek-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+    row-gap: 45px;
+  }
+
+  .why-bitstek-icon {
+    height: 85px;
+  }
+
+  .why-bitstek-svg-icon {
+    width: 82px;
+    height: 82px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .why-bitstek {
+    padding: 35px 6%;
+  }
+
+  .why-bitstek-header h2 {
+    font-size: 27px;
+  }
+
+  .why-bitstek-header > p {
+    font-size: 16px;
+  }
+
+  .why-bitstek-grid {
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+    margin-top: 30px;
+  }
+
+  .why-bitstek-icon {
+    height: 72px;
+    margin-bottom: 10px;
+  }
+
+  .why-bitstek-svg-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .why-bitstek-card h3 {
+    margin-bottom: 14px;
+    font-size: 21px;
+  }
+
+  .why-bitstek-card > p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}

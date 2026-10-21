@@ -1,0 +1,333 @@
+
+.live-quotes-section {
+  background: #000;
+  color: #fff;
+  padding: 70px 7.2% 50px;
+}
+
+.live-quotes-main {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 4%;
+  align-items: start;
+}
+
+.quotes-panel {
+  position: relative;
+  padding: 20px 38px 30px;
+  background: #fff;
+  color: #171717;
+  border-radius: 5px;
+  min-width: 0;
+}
+
+.quote-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 90px 75px;
+  align-items: center;
+  gap: 15px;
+  min-height: 67px;
+  border-bottom: 1px solid #eee;
+}
+
+.quote-pair {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.quote-flags {
+  font-size: 24px;
+  letter-spacing: -10px;
+  padding-right: 8px;
+  white-space: nowrap;
+}
+
+.quote-pair strong,
+.quote-pair small {
+  display: block;
+}
+
+.quote-pair strong {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.quote-pair small {
+  margin-top: 5px;
+  color: #777;
+  font-size: 12px;
+}
+
+.quote-price {
+  text-align: right;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.quote-change {
+  text-align: right;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.quote-change small {
+  display: block;
+  margin-top: 3px;
+  font-size: 13px;
+}
+
+.quote-change.up {
+  color: #00a887;
+}
+
+.quote-change.down {
+  color: #ff3045;
+}
+
+.demo-label {
+  position: absolute;
+  bottom: 7px;
+  right: 12px;
+  color: #777;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.instruments-link {
+ grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.quotes-description {
+  padding-top: 0;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.quotes-description h2 {
+  margin: 0 0 23px;
+  color: #f4c431;
+  font-size: clamp(28px, 2.3vw, 38px);
+  line-height: 1.25;
+}
+
+.quotes-description p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.quotes-description ul {
+  display: grid;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0;
+}
+
+.quotes-description li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+}
+
+.quotes-description li::before {
+  content: "✓";
+  display: flex;
+  flex: 0 0 19px;
+  width: 19px;
+  height: 19px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f4c431;
+  color: #111;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.quote-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 90px;
+}
+
+.quote-stats > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-height: 100px;
+  text-align: center;
+}
+
+.quote-stats > div + div {
+  border-left: 1px solid #999;
+}
+
+.quote-stats strong {
+  color: #f4c431;
+  font-size: clamp(27px, 2.2vw, 37px);
+}
+
+.quote-stats span {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #f4c431;
+}
+
+.quotes-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 44px;
+}
+
+.quotes-actions a {
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1px solid #f4c431;
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.quotes-primary-button {
+  background: #f4c431;
+  color: #333;
+}
+
+.quotes-secondary-button {
+  background: transparent;
+  color: #f4c431;
+}
+
+.quotes-actions a:hover {
+  background: #ffda59;
+  color: #222;
+}
+
+.registration-note {
+  margin: 26px 0 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .live-quotes-section {
+    padding: 50px 5%;
+  }
+
+  .live-quotes-main {
+    display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  grid-template-rows: auto auto;
+  column-gap: 4%;
+  row-gap: 0;
+  align-items: start;
+  }
+
+  .quotes-description {
+    grid-column: 2;
+  grid-row: 1 / span 2;
+  }
+
+  .quotes-panel {
+     grid-column: 1;
+  grid-row: 1;
+  }
+
+  .quote-stats {
+    margin-top: 55px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .live-quotes-section {
+    padding: 40px 5%;
+  }
+
+  .quotes-description h2 {
+    font-size: 28px;
+  }
+
+  .quotes-description p,
+  .quotes-description li {
+    font-size: 14px;
+  }
+
+  .quotes-panel {
+    padding: 12px 10px 28px;
+  }
+
+  .quote-row {
+    grid-template-columns: minmax(0, 1fr) 70px 55px;
+    gap: 8px;
+    min-height: 66px;
+  }
+
+  .quote-flags {
+    font-size: 18px;
+    letter-spacing: -8px;
+  }
+
+  .quote-pair {
+    gap: 7px;
+  }
+
+  .quote-pair strong,
+  .quote-price,
+  .quote-change {
+    font-size: 11px;
+  }
+
+  .quote-pair small,
+  .quote-change small {
+    font-size: 9px;
+  }
+
+  .quote-stats {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+    margin-top: 50px;
+  }
+
+  .quote-stats > div {
+    padding: 12px 5px;
+  }
+
+  .quote-stats > div:nth-child(3) {
+    border-left: none;
+  }
+
+  .quote-stats strong {
+    font-size: 25px;
+  }
+
+  .quote-stats span {
+    font-size: 10px;
+  }
+
+  .quotes-actions {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 35px;
+  }
+
+  .quotes-actions a {
+    font-size: 14px;
+  }
+
+  .registration-note {
+    font-size: 14px;
+  }
+}
